@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controller Optimization Animations</title>
+
+  <!-- MathJax for LaTeX rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      max-width: 900px;
+    }
+    .video-container {
+      margin: 20px 0;
+    }
+    .math {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Distributed Delay Controller Optimization</h1>
+
+  <div class="video-container">
+    <video width="100%" controls>
+      <source src="animation1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <p class="math">
+    The optimization framework minimizes the spectral abscissa:  
+    $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda_i)\}$$  
+    where \( \lambda_i \) are the rightmost eigenvalues depending on controller parameters \( \mathbf{p} \).
+  </p>
+
+  <p>
+    The video above shows the evolution of the spectrum as parameters are tuned. Note how the rightmost eigenvalue moves leftward.
+  </p>
+
+</body>
+</html>
