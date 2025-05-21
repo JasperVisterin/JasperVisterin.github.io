@@ -29,22 +29,29 @@
 
   <h1>Distributed Delay Controller Optimization</h1>
 
-  <div class="video-container">
+  <p class="math">
+    The optimization framework minimizes the spectral abscissa:  
+    $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\}$$  
+    where \( \lambda \) are the characteristic roots of the plant $P$ depending on controller parameters \( \mathbf{p} \). In this case, the Distributed Delay Controller is studied. 
+  </p>
+
+  <p>
+    The videos below shows the evolution of the spectrum as parameters are tuned.
+  </p>
+
+    <div class="video-container">
     <video width="100%" controls>
       <source src="first_experiment.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
 
-  <p class="math">
-    The optimization framework minimizes the spectral abscissa:  
-    $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda_i)\}$$  
-    where \( \lambda_i \) are the rightmost eigenvalues depending on controller parameters \( \mathbf{p} \).
-  </p>
-
-  <p>
-    The video above shows the evolution of the spectrum as parameters are tuned. Note how the rightmost eigenvalue moves leftward.
-  </p>
-
+    <div class="video-container">
+    <video width="100%" controls>
+      <source src="second_experiment.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
 </body>
 </html>
