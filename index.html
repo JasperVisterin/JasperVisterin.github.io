@@ -60,7 +60,27 @@
 
     <p class="math">
     The video below show the evolution of the spectrum as parameters are tuned for the following system:
-    $$    \dot{x}(t) = (1-e^{-1})x(t)+\frac{1}{2}x(t-1)+\frac{e}{2}\,x(t-2)+\frac{e^2}{2} x(t-3) +\int_{-1}^{0}\theta \,x(t+\theta)d\theta  + u\left(t-\frac{1}{32}\right) $$
+    $$    \dot{x}(t) = \left(1-e^{-1}\right)\begin{bmatrix}
+1 & 2 \\
+2 & 1 \\
+\end{bmatrix}x(t)
++\frac{1}{2}\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{bmatrix}x(t-1)+
+\frac{e}{2}\begin{bmatrix}
+-2 & 1 \\
+1 & -2 \\
+\end{bmatrix}x(t-2)+ \int_{-1}^{0}\begin{bmatrix}
+2e^{\theta} & 0 \\
+0 & e^{\theta} \\
+\end{bmatrix} x(t+\theta)
+ d\theta 
+ +
+\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}u\left(t-\frac{1}{2}\right)  $$
   </p>
 
   <div class="video-container">
