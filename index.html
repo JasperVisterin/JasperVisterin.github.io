@@ -32,11 +32,16 @@
   <p class="math">
     The optimization framework minimizes the spectral abscissa:  
     $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\}$$  
-    where \( \lambda \) are the characteristic roots of the plant $P$ depending on controller parameters \( \mathbf{p} \). In this case, the Distributed Delay Controller is studied. 
+    where \( \lambda \) are the characteristic roots of the plant $P$ depending on controller parameters \( \mathbf{p} \). In this case, the Distributed Delay Controller is studied and $K_1, K_2$ and $c$ make up the parameters $\mathbf{p}$.
+    $$ C \leftrightarrow u(t)=K_{1} y(t) + K_{2} \int_{-\tau}^{0} g(\theta) y(t+\theta) d \theta  $$
+    $$ 
+    g(\theta)=\sum_{k=0}^K c_k T_k\left(2 \frac{\theta}{\tau}+1\right)
+    $$ 
   </p>
 
-  <p>
-    The videos below shows the evolution of the spectrum as parameters are tuned.
+  <p class="math">
+    The videos below show the evolution of the spectrum as parameters are tuned for the following system:
+    $$    \dot{x}(t) = (1-e^{-1})x(t)+\frac{1}{2}x(t-1)+\frac{e}{2}\,x(t-2)+\frac{e^2}{2} x(t-3) +\int_{-1}^{0}\theta \,x(t+\theta)d\theta  + u\left(t-\frac{1}{32}\right) $$
   </p>
 
     <div class="video-container">
@@ -49,6 +54,18 @@
     <div class="video-container">
     <video width="100%" controls>
       <source src="second_experiment.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+    <p class="math">
+    The video below show the evolution of the spectrum as parameters are tuned for the following system:
+    $$    \dot{x}(t) = (1-e^{-1})x(t)+\frac{1}{2}x(t-1)+\frac{e}{2}\,x(t-2)+\frac{e^2}{2} x(t-3) +\int_{-1}^{0}\theta \,x(t+\theta)d\theta  + u\left(t-\frac{1}{32}\right) $$
+  </p>
+
+  <div class="video-container">
+    <video width="100%" controls>
+      <source src="system_2_experiment.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
