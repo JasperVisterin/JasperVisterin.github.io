@@ -31,7 +31,7 @@
 
   <p class="math">
     The optimization framework minimizes the spectral abscissa:  
-    $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\}$$  
+    $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\} = \min_{\mathbf{p}} \sigma_{\max}$$  
     where \( \lambda \) are the characteristic roots of the plant \(P\) depending on controller parameters \( \mathbf{p} \). In this case, the Distributed Delay Controller is studied, and \(K_1, K_2\) and \(c\) make up the parameters \(\mathbf{p}\).
     $$ C \leftrightarrow u(t)=K_{1} y(t) + K_{2} \int_{-\tau}^{0} g(\theta) y(t+\theta) d \theta  $$
     $$ 
@@ -39,6 +39,29 @@
     $$ 
   </p>
 
+ <p class="math">
+    The main concern when doing this is that the kernel \(g(\theta)\) will exhibit extreme oscillations when \( K \) is chosen large. This effect has all kinds of undesired consequences. Hence,
+    two approaches have been developed to deal with this. On one hand, there is a Penalty-Based Regularization which uses a Penalty-term \(REG(c)\). This Penalty-term is implemented in the following way:
+    $$
+   REG(c)=R[g]=\int_{-\tau}^{0}\left(g^{\prime}(\theta)\right)^2 d \theta
+   $$
+   $$
+    \min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\} = \min_{\mathbf{p}} \sigma_{\max}
+   $$
+   The other option is a more heuristic regularization. This heuristic, which is called the Damping Heuristic, has been developed via Chebyshev approximation theory. 
+   The intuition used here is that, roughly speaking, for analytic functions that are analytic on a larger domain that these functions have Chebyshev coefficients that decay faster than functions which are analytic on a smaller domain. Assuming reasonable conditions, both functions have coefficients that decay exponentially [1]. 
+   Hence, to obtain smooth kernels \(g(\theta)\), this principle can be employed. The Chebyshev coefficients are damped with an exponential factor \(\rho>1)\: 
+   $$
+   c_k= 
+\begin{cases}
+\tilde{c}_k& 0\leq k \leq 5 \\
+\frac{\tilde{c}_k}{\rho^{k-5}}, & 6 \leq k
+\end{cases}    
+   $$
+   Note that this concept does not directly penalize the global smoothness, but controls the kernel's resolution to avoid overfitting or instability. It acts as a practical damping mechanism during optimization. 
+   While \(\rho)\ is still a hyperparameter, the concept is simple, interpretable, and rooted in Chebyshev approximation theory. 
+ </p>
+  
   <p class="math">
     The videos below show the evolution of the spectrum as parameters are tuned for the following system:
     $$ P \leftrightarrow  \dot{x}(t) = (1-e^{-1})x(t)+\frac{1}{2}x(t-1)+\frac{e}{2}\,x(t-2)+\frac{e^2}{2} x(t-3) +\int_{-1}^{0}\theta \,x(t+\theta)d\theta  + u\left(t-\frac{1}{32}\right) $$
@@ -89,6 +112,13 @@
       Your browser does not support the video tag.
     </video>
   </div>
+
+
+
+   <p class="math">
+     Sources:
+    [1] L. N. Trefethen, Approximation Theory and Approximation Practice, Extended Edition. 1 2019.
+   </p>
   
 </body>
 </html>
