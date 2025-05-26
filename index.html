@@ -50,7 +50,7 @@
    $$
    The other option is a more heuristic regularization. This heuristic, which is called the Damping Heuristic, has been developed via Chebyshev approximation theory. 
    The intuition used here is that, roughly speaking, for analytic functions that are analytic on a larger domain that these functions have Chebyshev coefficients that decay faster than functions which are analytic on a smaller domain. Assuming reasonable conditions, both functions have coefficients that decay exponentially [1]. 
-   Hence, to obtain smooth kernels \(g(\theta)\), this principle can be employed. The Chebyshev coefficients are damped with an exponential factor \(\rho>1)\: 
+   Hence, to obtain smooth kernels \(g(\theta)\), this principle can be employed. The Chebyshev coefficients are damped with an exponential factor \( \rho>1 \): 
    $$
    c_k= 
 \begin{cases}
@@ -59,8 +59,25 @@
 \end{cases}    
    $$
    Note that this concept does not directly penalize the global smoothness, but controls the kernel's resolution to avoid overfitting or instability. It acts as a practical damping mechanism during optimization. 
-   While \(\rho)\ is still a hyperparameter, the concept is simple, interpretable, and rooted in Chebyshev approximation theory. 
+   While \( \rho \) is still a hyperparameter, the concept is simple, interpretable, and rooted in Chebyshev approximation theory. 
  </p>
+
+  <p class="math">
+    Furthermore, as regularization is applied, the spectral abscissa will always experience an increase compared to the situation where \(g(\theta)\) is not regularized. 
+    It is, in fact, a multi-objective optimization problem where two objectives are optimized at once. 
+    In bi-objective optimization, different linear combinations of two convex objective functions, \(J_1(\mathbf{p}) \) and \(J_2(\mathbf{p}) \), trace out the Pareto front. 
+    However, for the two objectives \(\sigma_{\max}\) and \(REG(c)\), the complete objective function will be non-convex due to the presence of the spectral abscissa. 
+    Hence, this visualization is only valid for a specific local minimum. In the non-convex case, 
+    constructing a Pareto front requires identifying a local minimum of the weighted objective for a given $\alpha$, 
+    and then repeatedly resolving the optimization problem over a grid of $\alpha$ values. This process aims to track how the local minimum evolves as $\alpha$ varies, attempting to trace the local Pareto front.
+$$
+ \min _{\mathbf{p}} \alpha J_1(\mathbf{p})+(1-\alpha)J_2(\mathbf{p}),\quad\alpha\in[0,1]
+$$
+Experiments illustrated that it is very difficult to obtain a proper Pareto front even with intense sampling. 
+    Occasional jumps to different local minima still occur, even on intensively sampled grids. A possible explanation for this is the high sensitivity of the spectral abscissa. The purpose of this website is to show
+  how this Pareto Front is formed using the different kinds of regularization. In the case of the Damping Heuristic, one cannot strictly speak about a bi-objective optimization because the damping is implicit unlike \( REG(c) \).
+    However, the visual of the Pareto Front can also be obtained by using damping.
+  </p>
   
   <p class="math">
     The videos below show the evolution of the spectrum as parameters are tuned for the following system:
