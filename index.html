@@ -30,13 +30,8 @@
   <h1>Distributed Delay Controller Optimization</h1>
 
   <p class="math">
-    The optimization framework minimizes the spectral abscissa:  
-    $$\min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\} = \min_{\mathbf{p}} \sigma_{\max}$$  
-    where \( \lambda \) are the characteristic roots of the plant \(P\) depending on controller parameters \( \mathbf{p} \). In this case, the Distributed Delay Controller is studied, and \(K_1, K_2\) and \(c\) make up the parameters \(\mathbf{p}\).
-    $$ C \leftrightarrow u(t)=K_{1} y(t) + K_{2} \int_{-\tau}^{0} g(\theta) y(t+\theta) d \theta  $$
-    $$ 
-    g(\theta)=\sum_{k=0}^K c_k T_k\left(2 \frac{\theta}{\tau}+1\right)
-    $$ 
+    This website was created to support the Thesis 'Control by Shaping Delay Distribution' by Jasper Visterin. If you are already familiar with the matter, 
+    feel free to skip to the animations illustrating a tradeoff between kernel smoothness and closed-loop plant performance, or more concretely, the regularization-spectral abscissa tradeoff.
   </p>
 
  <p class="math">
@@ -68,20 +63,22 @@
     In bi-objective optimization, different linear combinations of two convex objective functions, \(J_1(\mathbf{p}) \) and \(J_2(\mathbf{p}) \), trace out the Pareto front. 
     However, for the two objectives \(\sigma_{\max}\) and \(REG(c)\), the complete objective function will be non-convex due to the presence of the spectral abscissa. 
     Hence, this visualization is only valid for a specific local minimum. In the non-convex case, 
-    constructing a Pareto front requires identifying a local minimum of the weighted objective for a given $\alpha$, 
-    and then repeatedly resolving the optimization problem over a grid of $\alpha$ values. This process aims to track how the local minimum evolves as $\alpha$ varies, attempting to trace the local Pareto front.
+    constructing a Pareto front requires identifying a local minimum of the weighted objective for a given \( \alpha \), 
+    and then repeatedly resolving the optimization problem over a grid of \( \alpha  \) values. This process aims to track how the local minimum evolves as $\alpha$ varies, attempting to trace the local Pareto front.
 $$
  \min _{\mathbf{p}} \alpha J_1(\mathbf{p})+(1-\alpha)J_2(\mathbf{p}),\quad\alpha\in[0,1]
 $$
 Experiments illustrated that it is very difficult to obtain a proper Pareto front even with intense sampling. 
     Occasional jumps to different local minima still occur, even on intensively sampled grids. A possible explanation for this is the high sensitivity of the spectral abscissa. The purpose of this website is to show
   how this Pareto Front is formed using the different kinds of regularization. In the case of the Damping Heuristic, one cannot strictly speak about a bi-objective optimization because the damping is implicit unlike \( REG(c) \).
-    However, the visual of the Pareto Front can also be obtained by using damping.
+    However, the visual of the Pareto Front can also be obtained by using damping. As you continue on this website, you will see in the provided animations 
+    how the spectral abscissa changes when a regularization parameter like \( \alpha \) or \( \rho \) is changed. 
   </p>
   
   <p class="math">
     The videos below show the evolution of the spectrum as parameters are tuned for the following system:
     $$ P \leftrightarrow  \dot{x}(t) = (1-e^{-1})x(t)+\frac{1}{2}x(t-1)+\frac{e}{2}\,x(t-2)+\frac{e^2}{2} x(t-3) +\int_{-1}^{0}\theta \,x(t+\theta)d\theta  + u\left(t-\frac{1}{32}\right) $$
+    For this system, illustrations of both Penalty- as Damping-regularization are given.
   </p>
 
     <div class="video-container">
@@ -94,6 +91,13 @@ Experiments illustrated that it is very difficult to obtain a proper Pareto fron
     <div class="video-container">
     <video width="100%" controls>
       <source src="second_experiment.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+      <div class="video-container">
+    <video width="100%" controls>
+      <source src="system_1_alpha_animation.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -133,8 +137,7 @@ Experiments illustrated that it is very difficult to obtain a proper Pareto fron
 
 
    <p class="math">
-     Sources:
-    [1] L. N. Trefethen, Approximation Theory and Approximation Practice, Extended Edition. 1 2019.
+     Sources: [1] L. N. Trefethen, Approximation Theory and Approximation Practice, Extended Edition. 1 2019.
    </p>
   
 </body>
