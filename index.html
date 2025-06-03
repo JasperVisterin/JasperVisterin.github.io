@@ -62,17 +62,18 @@
     It is, in fact, a multi-objective optimization problem where two objectives are optimized at once. 
     In bi-objective optimization, different linear combinations of two convex objective functions, \(J_1(\mathbf{p}) \) and \(J_2(\mathbf{p}) \), trace out the Pareto front. 
     However, for the two objectives \(\sigma_{\max}\) and \(REG(c)\), the complete objective function will be non-convex due to the presence of the spectral abscissa. 
-    Hence, this visualization is only valid for a specific local minimum. In the non-convex case, 
-    constructing a Pareto front requires identifying a local minimum of the weighted objective for a given \( \alpha \), 
-    and then repeatedly resolving the optimization problem over a grid of \( \alpha  \) values. This process aims to track how the local minimum evolves as \( \alpha  \) varies, attempting to trace the local Pareto front.
-$$
+    Hence, this visualization is only valid for a specific local minimum. In non-convex scenarios, one approach to constructing a Pareto front involves identifying a local minimum of the weighted objective for a specific \(\alpha\) value. 
+    By systematically varying \(\alpha\) across a predefined grid and solving the optimization problem at each step, this method seeks to observe the evolution of the local minimum, 
+    thereby approximating the local Pareto front.
+    $$
  \min _{\mathbf{p}} \alpha J_1(\mathbf{p})+(1-\alpha)J_2(\mathbf{p}),\quad\alpha\in[0,1]
 $$
-Experiments illustrated that it is very difficult to obtain a proper Pareto front even with intense sampling. 
-    Occasional jumps to different local minima still occur, even on intensively sampled grids. A possible explanation for this is the high sensitivity of the spectral abscissa. The purpose of this website is to show
-  how this Pareto Front is formed using the different kinds of regularization. In the case of the Damping Heuristic, one cannot strictly speak about a bi-objective optimization because the damping is implicit unlike \( REG(c) \).
-    However, the visual of the Pareto Front can also be obtained by using damping. As you continue on this website, you will see in the provided animations 
+Theory showed that constructing such a Pareto front, following the latter described process, can express discontinuous jumps between local minima due to the non-convex nature 
+    of the objective [2]. Experiments confirmed that this can indeed happen.
+    The purpose of this website is to show how this Pareto Front is formed using the different kinds of regularization. In the case of the Damping Heuristic, one cannot strictly speak about a bi-objective optimization because the damping is implicit, unlike \( REG(c) \).
+    However, the visual of the Pareto Front can also be obtained by using damping. As you continue on this website, you will see in the provided animations of
     how the spectral abscissa changes when a regularization parameter like \( \alpha \) or \( \rho \) is changed. 
+
   </p>
   
   <p class="math">
@@ -137,7 +138,13 @@ Experiments illustrated that it is very difficult to obtain a proper Pareto fron
 
 
    <p class="math">
-     Sources: [1] L. N. Trefethen, Approximation Theory and Approximation Practice, Extended Edition. 1 2019.
+     Sources: 
+   </p>
+ <p class="math">
+     [1] L. N. Trefethen, Approximation Theory and Approximation Practice, Extended Edition. 1 2019.
+   </p>
+  <p class="math">
+     [2] K. Miettinen, Nonlinear multiobjective optimization. 1 1998.
    </p>
   
 </body>
