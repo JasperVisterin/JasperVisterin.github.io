@@ -38,10 +38,9 @@
  <p class="math">
 
 Building upon the methodology in [1], a general-purpose controller optimization framework concerning the spectral abscissa is developed for systems with discrete and distributed delays.  
-   In the framework, LTI time-delay systems of the form \eqref{eq:plant} are considered where \(x\in\mathbb{R}^n\) is the state variable, \(u\in\mathbb{R}^{n_u}\) 
+   In the framework, LTI time-delay systems of the form \(P\) are considered where \(x\in\mathbb{R}^n\) is the state variable, \(u\in\mathbb{R}^{n_u}\) 
    represents the control input, and \(y\in\mathbb{R}^{n_y}\) represents the control output. 
 $$
-   \label{eq:plant}
 P \leftrightarrow\left\{\begin{aligned}
 \dot{x}(t) & =\sum_{k=1}^{m_A} A_k x\left(t-h_{A, k}\right)+\sum_{k=1}^{m_{B}} B_{k} u\left(t-h_{B, k}\right) + \int_{-h_I}^{0}G(\theta)x(t+\theta)d\theta
 \\
@@ -50,37 +49,56 @@ y(t) & =\sum_{k=1}^{m_{C}} C_{ k} x\left(t-h_{C, k}\right)
 $$
    
 Typically, inputs correspond to system actuators steering the system to a desired state, whereas outputs are system measurements essential to know what is happening in the system. The framework allows the construction of static and dynamic output feedback controllers using the output \(y(t)\). 
-   Dynamic output feedback controllers are of form \eqref{eq:dynamic} with \(x_c \in \mathbb{R}^{n_c}\)
+   Dynamic output feedback controllers are of form \(C_{dyn}\) with \(x_c \in \mathbb{R}^{n_c}\)
    the state variable of the controller and real-valued matrices \(A_c, B_c, C_c\), and \(D_c\) with appropriate dimensions.
 
    $$
    \label{eq:dynamic}
-C \leftrightarrow\left\{\begin{aligned}
+C_{dyn} \leftrightarrow\left\{\begin{aligned}
 \dot{x}_c(t) & =A_c x_c(t)+B_c y(t) \\
 u(t) & =C_c x_c(t)+D_c y(t)
 \end{aligned}\right.
 $$
    
-If \(n_c\) is equal to \(0\), the dynamic controller reduces to the static output feedback law as \eqref{eq:static}.
+If \(n_c\) is equal to \(0\), the dynamic controller reduces to the static output feedback law as \(C_{stat}\).
 $$
    \label{eq:static}
-C \leftrightarrow u(t)=D_c y(t)
+C_{stat} \leftrightarrow u(t)=D_c y(t)
 $$
-A novel kind of feedback, for which static feedback is a special case of the control law \eqref{eq:distributed}, the following control law combining static and distributed delay output feedback where \(K_1, K_2 \in \mathbb{R}^{n_u \times n_y}\), the kernel \(g(\theta)\) is defined as a Chebyshev expansion
+A novel kind of feedback, for which static feedback is a special case of the control law \(C_{dist}\) , the following control law combining static and distributed delay output feedback where \(K_1, K_2 \in \mathbb{R}^{n_u \times n_y}\), the kernel \(g(\theta)\) is defined as a Chebyshev expansion
    for a fixed positive integer \(K\), \(c_k \in \mathbb{R}\), \(T_k\) denotes the Chebyshev polynomial of the first kind of order \(k\). 
    The delay \(\tau\) is the maximum delay appearing in \(P\).
 $$
     \label{eq:distributed}
-C \leftrightarrow u(t)=K_{1}\, y(t) + K_{2} \int_{-\tau}^{0} g(\theta) y(t+\theta) d \theta, \quad g(\theta)=\sum_{k=0}^K c_k T_k\left(2 \frac{\theta}{\tau}+1\right)
+C_{dist} \leftrightarrow u(t)=K_{1}\, y(t) + K_{2} \int_{-\tau}^{0} g(\theta) y(t+\theta) d \theta, \quad g(\theta)=\sum_{k=0}^K c_k T_k\left(2 \frac{\theta}{\tau}+1\right)
 $$
-    The main concern when naively optimizing this controller is that the kernel \(g(\theta)\) will exhibit extreme oscillations when \( K \) is chosen large. This effect has all kinds of undesired consequences. Hence,
+
+When considering a controller \(C\) for a plant \(P\), a closed-loop feedback system is obtained. This system is denoted as \(CL\). The framework is then concerned with minimizing the spectral abscissa 
+   of this closed-loop system. The spectral abcissa is the real part of the rightmost root in the spectrum of \(CL\). In other words, the optimization problem can be formulated as:
+
+   $$
+   \min _{\mathbf{p}} \max \left( \, \operatorname{Re}\left(\lambda\right) \mid \lambda \in \Lambda(CL) \,\,\right) = \min _{\mathbf{p}} \sigma_{\max} 
+   $$
+
+   Considering a static, dynamic, and static-distributed delay output feedback controller, the parameters \(\mathbf{p}\) are respectively 
+   $$
+\mathrm{vec}(D_c) , \quad\mathrm{vec}\left(\left[\begin{array}{cc}
+B_c & A_c \\
+D_c & C_c
+\end{array}\right]\right) \quad\text{and} \quad \begin{bmatrix} \mathrm{vec}(K_1) \\ \mathrm{vec}(K_2) \\ c \end{bmatrix}  $$
+      where \(\mathrm{vec}(\cdot)\) denotes column-wise flattening. These are the parameters \(\mathbf{p}\) considered that will be tuned in order to obtain an optimal value of the spectral abscissa.
+
+
+   
+  <h2> Regularization of the Kernel </h2>
+ <p class="math">
+   
+    The main concern when naively optimizing the novel controller \(C_{dist}\) is that the kernel \(g(\theta)\) will exhibit extreme oscillations when \( K \) is chosen large. This effect has all kinds of undesired consequences. Hence,
     two approaches have been developed to deal with this. On one hand, there is a Penalty-Based Regularization which uses a Penalty-term \(REG(c)\). This Penalty-term is implemented in the following way:
     $$
    REG(c)=R[g]=\int_{-\tau}^{0}\left(g^{\prime}(\theta)\right)^2 d \theta
    $$
-   $$
-    \min_{\mathbf{p}} \max \{\operatorname{Re}(\lambda)\} = \min_{\mathbf{p}} \sigma_{\max}
-   $$
+
    The other option is a more heuristic regularization. This heuristic, which is called the Damping Heuristic, has been developed via Chebyshev approximation theory. 
    The intuition used here is that, roughly speaking, for analytic functions that are analytic on a larger domain that these functions have Chebyshev coefficients that decay faster than functions which are analytic on a smaller domain. Assuming reasonable conditions, both functions have coefficients that decay exponentially [2]. 
    Hence, to obtain smooth kernels \(g(\theta)\), this principle can be employed. The Chebyshev coefficients are damped with an exponential factor \( \rho>1 \): 
