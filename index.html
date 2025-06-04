@@ -99,7 +99,7 @@ D_c & C_c
    REG(c)=R[g]=\int_{-\tau}^{0}\left(g^{\prime}(\theta)\right)^2 d \theta
    $$
 
-   The other option is a more heuristic regularization. This heuristic, which is called the Damping Heuristic, has been developed via Chebyshev approximation theory. 
+   The other option is a more heuristic regularization. This heuristic, which is called the damping heuristic, has been developed via Chebyshev approximation theory. 
    The intuition used here is that, roughly speaking, for analytic functions that are analytic on a larger domain that these functions have Chebyshev coefficients that decay faster than functions which are analytic on a smaller domain. Assuming reasonable conditions, both functions have coefficients that decay exponentially [2]. 
    Hence, to obtain smooth kernels \(g(\theta)\), this principle can be employed. The Chebyshev coefficients are damped with an exponential factor \( \rho>1 \): 
    $$
@@ -109,8 +109,7 @@ D_c & C_c
 \frac{\tilde{c}_k}{\rho^{k-5}}, & 6 \leq k
 \end{cases}    
    $$
-   Note that this concept does not directly penalize the global smoothness, but controls the kernel's resolution to avoid overfitting or instability. It acts as a practical damping mechanism during optimization. 
-   While \( \rho \) is still a hyperparameter, the concept is simple, interpretable, and rooted in Chebyshev approximation theory. 
+   Note that this concept does not directly penalize the global smoothness. However, it focuses on ensuring that the higher-order terms of the Chebyshev expansion are damped to obtain regularization. While \( \rho \) is still a hyperparameter, the concept is simple, interpretable, and rooted in Chebyshev approximation theory. 
  </p>
 <h3> Multi-Objective Optimization and Regularization </h3>
   <p class="math">
@@ -126,7 +125,7 @@ D_c & C_c
 $$
 Theory showed that constructing such a Pareto front, following the latter described process, can express discontinuous jumps between local minima due to the non-convex nature 
     of the objective [3]. Experiments confirmed that this can indeed happen.
-    The purpose of this website is to show how this Pareto Front is formed using the different kinds of regularization. In the case of the Damping Heuristic, one cannot strictly speak about a bi-objective optimization because the damping is implicit, unlike \( REG(c) \).
+    The purpose of this website is to show how this Pareto Front is formed using the different kinds of regularization. In the case of the damping heuristic, one cannot strictly speak about a bi-objective optimization because the damping is implicit, unlike \( REG(c) \).
     However, the visual of the Pareto Front can also be obtained by using damping. As you continue on this website, you will see in the provided animations of
     how the spectral abscissa changes when a regularization parameter like \( \alpha \) or \( \rho \) is changed. 
 
