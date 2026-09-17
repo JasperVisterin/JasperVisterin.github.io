@@ -8,4 +8,4 @@ date: 2026-02-18
 location: "Leuven, BE"
 ---
 
-# Guidance with the Course Project
+Constructed and provided guidance for Course Project

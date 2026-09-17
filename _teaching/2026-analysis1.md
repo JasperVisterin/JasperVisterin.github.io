@@ -8,4 +8,6 @@ date: 2026-10-01
 location: "Leuven, BE"
 ---
 
-# Exercise sessions
+Exercise sessions
+
+The slide material of the course will become available here.

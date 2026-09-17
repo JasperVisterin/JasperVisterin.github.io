@@ -22,7 +22,7 @@ Work experience
   * Research and Teaching
   * Supervisor: Wim Michiels
 
-* Summer 2024 - Current Time: Writing Contributor
+* Summer 2024 - ... : Writing Contributor
   * Study Centre of Automatic Information Processing (SAI)
   * Covering recent developments in the tech and data science sector
   
