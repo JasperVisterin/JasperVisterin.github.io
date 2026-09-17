@@ -11,35 +11,39 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Mathematical Engineering, KU Leuven, 2025
+  * including Study Exchange, Chalmers, 2023
+* B.S. in Engineering Science, KU Leuven, 2023
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Fall 2025: PhD Student
+  * KU Leuven
+  * Research and Teaching
+  * Supervisor: Wim Michiels
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Summer 2024 - Current Time: Writing Contributor
+  * Study Centre of Automatic Information Processing (SAI)
+  * Covering recent developments in the tech and data science sector
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* MATLAB
+* Python
+* Julia
+* C
+* C++
+* Java
+* Magma
+* R
+
+Languages
+======
+* Dutch
+* English
+* French
+* Swedish
+* German
 
 Publications
 ======
@@ -58,7 +62,3 @@ Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams

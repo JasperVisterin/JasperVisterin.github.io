@@ -8,4 +8,4 @@ date: 2025-10-01
 location: "Leuven, BE"
 ---
 
-Exercise sessions
+# Exercise sessions
