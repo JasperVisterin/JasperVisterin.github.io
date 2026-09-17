@@ -1,5 +1,5 @@
 ---
-title: "Analysis Part I"
+title: "Analysis Part I 2026-2027"
 collection: teaching
 type: "Bachelor"
 permalink: /teaching/analysis-2026
