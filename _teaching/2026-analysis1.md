@@ -9,5 +9,3 @@ location: "Leuven, BE"
 ---
 
 Exercise sessions
-
-The slide material of the course will become available here.
