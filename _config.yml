@@ -23,7 +23,7 @@ repository               : "JasperVisterin/JasperVisterin.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : # "Your Sidebar Name"
   pronouns         : # example: "she/her"  
   bio              : "I am a PhD student at the NUMA research unit at KU Leuven. My research focuses on both model-based and data-based system control under the supervision of Wim Michiels."
@@ -51,7 +51,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : https://github.com/JasperVisterin
+  github           : JasperVisterin
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : https://www.linkedin.com/in/jasper-visterin/
+  linkedin         : jasper-visterin
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
