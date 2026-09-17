@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "mint" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Jasper Visterin"
 title_separator          : "-"
 name                     : &name "Jasper Visterin"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.jpg"
   name             : # "Your Sidebar Name"
   pronouns         : # example: "she/her"  
-  bio              : "I am a PhD student at the NUMA research unit at KU Leuven. My research focuses on both model-based and data-based system control under the supervision of Wim Michiels."
+  bio              : "PhD student at NUMA Research Unit"
   location         : "Belgium"
   employer         : "KU Leuven"
   uri              : # URL
