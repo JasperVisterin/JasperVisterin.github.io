@@ -1,7 +1,7 @@
 ---
 title: "A lot of math"
 collection: publications
-category: conferences
+category: SAI
 permalink: /publication/2024-02-17-paper-title-number-4
 excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
 date: 2024-02-17

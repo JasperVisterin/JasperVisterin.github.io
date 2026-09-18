@@ -11,9 +11,12 @@ redirect_from:
 
 Education
 ======
-* M.S. in Mathematical Engineering (Summa Cum Laude), KU Leuven, 2025
-  * including Study Exchange, Chalmers University of Technology (Sweden), 2023
-* B.S. in Engineering Science (Cum Laude), KU Leuven, 2023
+* M.S. in Mathematical Engineering, KU Leuven, 2025
+  * Summa Cum Laude
+  * including Study Exchange in Sweden, Chalmers University of Technology, 2023
+
+* B.S. in Engineering Science, KU Leuven, 2023
+  * Cum Laude
 
 Work experience
 ======
@@ -31,11 +34,11 @@ Programming Languages
 * MATLAB
 * Python
 * Julia
+* R
 * C
 * C++
 * Java
 * Magma
-* R
 
 Languages
 ======
