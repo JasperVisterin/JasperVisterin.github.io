@@ -3,6 +3,15 @@ title: "Control by Shaping Delay Distribution"
 excerpt: "A general-purpose framework for spectral-abscissa optimization with discrete and distributed delays. The results improve the current state of analysis and control concerning time-delay systems. Beyond refining existing tools, this work introduces a novel distributed-delay output feedback control law, including regularization."
 collection: portfolio
 ---
+*MATLAB · Control Theory · Non-smooth Optimization · Time-Delay Systems*
+
+A framework for optimizing static, dynamic, and distributed-delay controllers by minimizing the spectral abscissa of infinite-dimensional time-delay systems.
+
+# Key contributions
+
+- General controller optimization framework for discrete and distributed delays
+- Static, dynamic, and distributed-delay output feedback
+- Penalty-based and Chebyshev-based kernel regularization
 
 # Controller Optimization for Time-Delay Systems
 
@@ -31,7 +40,7 @@ y(t)
 \right.
 $$
 
-where $x\in\mathbb{R}^n$ is the state, $u\in\mathbb{R}^{n_u}$ is the control input, and $y\in\mathbb{R}^{n_y}$ is the measured output.
+where \\(x\in\mathbb{R}^n\\) is the state, \\(u\in\mathbb{R}^{n_u}\\) is the control input, and \\(y\in\mathbb{R}^{n_y}\\) is the measured output.
 
 Inputs typically represent the actuators used to influence the system, while outputs represent measurements available to the controller.
 
@@ -55,10 +64,10 @@ u(t) &= C_c x_c(t) + D_c y(t),
 \right.
 $$
 
-where $x_c\in\mathbb{R}^{n_c}$ is the controller state and
-$A_c$, $B_c$, $C_c$, and $D_c$ are real-valued matrices of appropriate dimensions.
+where \\(x_c\in\mathbb{R}^{n_c}\\) is the controller state and
+\\(A_c\\), \\(B_c\\), \\(C_c\\), and \\(D_c\\) are real-valued matrices of appropriate dimensions.
 
-When $n_c=0$, this reduces to static output feedback,
+When \\(n_c=0\\), this reduces to static output feedback,
 
 $$
 C_{\mathrm{stat}} \leftrightarrow u(t)=D_c y(t).
@@ -79,9 +88,9 @@ K_2
 g(\theta)y(t+\theta)\,d\theta,
 $$
 
-where $K_1,K_2\in\mathbb{R}^{n_u\times n_y}$.
+where \\(K_1,K_2\in\mathbb{R}^{n_u\times n_y}\\).
 
-The kernel $g(\theta)$ is represented using a truncated Chebyshev expansion,
+The kernel \\(g(\theta)\\) is represented using a truncated Chebyshev expansion,
 
 $$
 g(\theta)
@@ -91,16 +100,16 @@ c_k
 T_k\left(2\frac{\theta}{\tau}+1\right),
 $$
 
-where $T_k$ denotes the Chebyshev polynomial of the first kind and
-$c_k\in\mathbb{R}$ are the corresponding expansion coefficients.
+where \\(T_k\\) denotes the Chebyshev polynomial of the first kind and
+\\(c_k\in\mathbb{R}\\) are the corresponding expansion coefficients.
 
-The parameter $\tau$ is taken as the maximum delay appearing in the plant.
+The parameter \\(\tau\\) is taken as the maximum delay appearing in the plant.
 
 ---
 
 ## Spectral-Abscissa Optimization
 
-Given a plant $P$ and controller $C$, the resulting closed-loop system is denoted by $CL$.
+Given a plant \\(P\\) and controller \\(C\\), the resulting closed-loop system is denoted by \\(CL\\).
 
 The objective of the framework is to find controller parameters that minimize the **spectral abscissa**
 
@@ -111,7 +120,7 @@ $$
 \operatorname{Re}(\lambda),
 $$
 
-where $\Lambda(CL)$ denotes the spectrum of the closed-loop system.
+where \\(\Lambda(CL)\\) denotes the spectrum of the closed-loop system.
 
 The controller-design problem can therefore be written as
 
@@ -123,7 +132,7 @@ $$
 }
 $$
 
-where $\mathbf{p}$ contains the parameters defining the controller.
+where \\(\mathbf{p}\\) contains the parameters defining the controller.
 
 For the three controller classes considered above, the optimization variables are respectively
 
@@ -157,7 +166,7 @@ c
 \end{bmatrix},
 $$
 
-where $\operatorname{vec}(\cdot)$ denotes column-wise vectorization and
+where \\(\operatorname{vec}(\cdot)\\) denotes column-wise vectorization and
 
 $$
 c =
@@ -172,7 +181,7 @@ The optimization procedure tunes these parameters in order to obtain a closed-lo
 
 # Regularization of the Distributed-Delay Kernel
 
-A practical difficulty arises when optimizing the distributed-delay controller. When the Chebyshev expansion degree $K$ is large, direct optimization can produce kernels with strong, undesirable oscillations.
+A practical difficulty arises when optimizing the distributed-delay controller. When the Chebyshev expansion degree \\(K\\) is large, direct optimization can produce kernels with strong, undesirable oscillations.
 
 To address this, two regularization approaches were investigated:
 
@@ -202,7 +211,7 @@ The second approach is based on the decay properties of Chebyshev expansions.
 
 For sufficiently regular functions, Chebyshev coefficients decay rapidly, with analytic functions exhibiting exponential coefficient decay under appropriate assumptions [2]. This suggests using the decay of the higher-order coefficients as a simple mechanism for controlling oscillations in the optimized kernel.
 
-The optimized coefficients $\tilde{c}_k$ are therefore modified according to
+The optimized coefficients \\(\tilde{c}_k\\) are therefore modified according to
 
 $$
 c_k =
@@ -215,9 +224,9 @@ c_k =
 \end{cases}
 $$
 
-where $\rho>1$ controls the amount of damping.
+where \\(\rho>1\\) controls the amount of damping.
 
-Unlike the penalty-based approach, this does not explicitly measure the global smoothness of $g$. Instead, it suppresses higher-order components of the Chebyshev expansion.
+Unlike the penalty-based approach, this does not explicitly measure the global smoothness of \\(g\\). Instead, it suppresses higher-order components of the Chebyshev expansion.
 
 The resulting regularization is therefore simple, interpretable, and directly motivated by Chebyshev approximation theory.
 
@@ -253,7 +262,7 @@ $$
 }
 $$
 
-For convex multi-objective problems, varying $\alpha$ can be used to trace the Pareto front. Here, however, the spectral-abscissa objective is non-convex. Consequently, the procedure may instead trace a **local Pareto front** associated with a particular local minimum.
+For convex multi-objective problems, varying \\(\alpha\\) can be used to trace the Pareto front. Here, however, the spectral-abscissa objective is non-convex. Consequently, the procedure may instead trace a **local Pareto front** associated with a particular local minimum.
 
 One way to investigate this is to solve the weighted optimization problem for a sequence of values
 
@@ -263,9 +272,9 @@ $$
 
 The resulting local minima can then be used to visualize how the trade-off between spectral performance and regularization evolves.
 
-Because of the non-convexity, the local minimum can change discontinuously as $\alpha$ varies [3]. Numerical experiments demonstrate that such transitions can indeed occur.
+Because of the non-convexity, the local minimum can change discontinuously as \\(\alpha\\) varies [3]. Numerical experiments demonstrate that such transitions can indeed occur.
 
-For the damping approach, there is no explicit second objective analogous to $\operatorname{REG}(c)$ because the regularization is imposed implicitly through the damping parameter $\rho$. Nevertheless, the same type of trade-off can be visualized by varying $\rho$ and observing the resulting changes in the spectral abscissa and kernel.
+For the damping approach, there is no explicit second objective analogous to \\(\operatorname{REG}(c)\\) because the regularization is imposed implicitly through the damping parameter \\(\rho\\). Nevertheless, the same type of trade-off can be visualized by varying \\(\rho\\) and observing the resulting changes in the spectral abscissa and kernel.
 
 ---
 
@@ -299,17 +308,17 @@ Both penalty-based and damping-based regularization are considered for this syst
 ### Penalty and Damping Regularization
 
 <video width="100%" controls>
-  <source src="images/first_experiment.mp4" type="video/mp4">
+  <source src="/images/first_experiment.mp4" type="video/mp4">
 </video>
 
 <video width="100%" controls>
-  <source src="images/second_experiment.mp4" type="video/mp4">
+  <source src="/images/second_experiment.mp4" type="video/mp4">
 </video>
 
 ### Evolution with the Regularization Parameter
 
 <video width="100%" controls>
-  <source src="images/system_1_alpha_animation.mp4" type="video/mp4">
+  <source src="/images/system_1_alpha_animation.mp4" type="video/mp4">
 </video>
 
 ---
@@ -363,7 +372,7 @@ $$
 The evolution of the spectrum during controller optimization is shown below.
 
 <video width="100%" controls>
-  <source src="images/system_2_experiment.mp4" type="video/mp4">
+  <source src="/images/system_2_experiment.mp4" type="video/mp4">
 </video>
 
 ---
