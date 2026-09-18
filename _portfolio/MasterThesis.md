@@ -46,8 +46,6 @@ Inputs typically represent the actuators used to influence the system, while out
 
 The framework allows the construction and optimization of static, dynamic, and distributed-delay output-feedback controllers.
 
----
-
 ## Controller Classes
 
 ### Dynamic Output Feedback
@@ -104,8 +102,6 @@ where \\(T_k\\) denotes the Chebyshev polynomial of the first kind and
 \\(c_k\in\mathbb{R}\\) are the corresponding expansion coefficients.
 
 The parameter \\(\tau\\) is taken as the maximum delay appearing in the plant.
-
----
 
 ## Spectral-Abscissa Optimization
 
@@ -177,8 +173,6 @@ $$
 
 The optimization procedure tunes these parameters in order to obtain a closed-loop system with a reduced spectral abscissa.
 
----
-
 # Regularization of the Distributed-Delay Kernel
 
 A practical difficulty arises when optimizing the distributed-delay controller. When the Chebyshev expansion degree \\(K\\) is large, direct optimization can produce kernels with strong, undesirable oscillations.
@@ -202,8 +196,6 @@ R[g]
 $$
 
 This penalizes rapidly varying kernels and introduces a direct trade-off between controller performance and kernel smoothness.
-
----
 
 ## Chebyshev Damping
 
@@ -229,8 +221,6 @@ where \\(\rho>1\\) controls the amount of damping.
 Unlike the penalty-based approach, this does not explicitly measure the global smoothness of \\(g\\). Instead, it suppresses higher-order components of the Chebyshev expansion.
 
 The resulting regularization is therefore simple, interpretable, and directly motivated by Chebyshev approximation theory.
-
----
 
 # Multi-Objective Optimization
 
@@ -276,8 +266,6 @@ Because of the non-convexity, the local minimum can change discontinuously as \\
 
 For the damping approach, there is no explicit second objective analogous to \\(\operatorname{REG}(c)\\) because the regularization is imposed implicitly through the damping parameter \\(\rho\\). Nevertheless, the same type of trade-off can be visualized by varying \\(\rho\\) and observing the resulting changes in the spectral abscissa and kernel.
 
----
-
 # Numerical Experiments
 
 The following experiments illustrate the effect of regularization on the spectrum of time-delay systems and on the resulting optimized controllers.
@@ -320,8 +308,6 @@ Both penalty-based and damping-based regularization are considered for this syst
 <video width="100%" controls>
   <source src="/images/system_1_alpha_animation.mp4" type="video/mp4">
 </video>
-
----
 
 ## Experiment 2 — Two-Dimensional System
 
