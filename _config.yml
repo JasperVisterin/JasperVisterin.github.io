@@ -24,12 +24,12 @@ repository               : "JasperVisterin/JasperVisterin.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : # "Your Sidebar Name"
+  name             : Jasper Visterin
   pronouns         : # example: "she/her"  
   bio              : "PhD student at NUMA Research Unit"
   location         : "Belgium"
   employer         : "KU Leuven"
-  uri              : # URL
+  uri              : https://www.kuleuven.be/wieiswie/nl/person/00181906
   email            : # URL 
 
   # Academic websites

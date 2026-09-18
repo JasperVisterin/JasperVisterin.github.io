@@ -4,7 +4,7 @@ collection: teaching
 type: "Bachelor"
 permalink: /teaching/analysis-2026
 venue: "KU Leuven"
-date: 2025-09-18
+date: 2026-09-18
 location: "Leuven, BE"
 ---
 
