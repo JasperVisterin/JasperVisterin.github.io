@@ -15,7 +15,7 @@ A framework for optimizing static, dynamic, and distributed-delay controllers by
 
 # Controller Optimization for Time-Delay Systems
 
-Building upon the methodology of Appeltans, Silm, and Michiels [1], I developed a general-purpose framework for controller optimization based on the **spectral abscissa** of time-delay systems. The framework supports systems of retarded-type with both **discrete and distributed delays**, and allows several classes of output-feedback controllers to be optimized.
+Building upon the methodology of Appeltans, Silm, and Michiels [1], I developed a general-purpose framework for controller optimization based on the spectral abscissa of time-delay systems. The framework supports systems of retarded-type with both discrete and distributed delays, and allows several classes of output-feedback controllers to be optimized.
 
 ## Time-Delay Systems
 
@@ -44,7 +44,7 @@ where \\(x\in\mathbb{R}^n\\) is the state, \\(u\in\mathbb{R}^{n_u}\\) is the con
 
 Inputs typically represent the actuators used to influence the system, while outputs represent measurements available to the controller.
 
-The framework allows the construction and optimization of **static**, **dynamic**, and **distributed-delay output-feedback controllers**.
+The framework allows the construction and optimization of static, dynamic, and distributed-delay output-feedback controllers.
 
 ---
 
@@ -111,7 +111,7 @@ The parameter \\(\tau\\) is taken as the maximum delay appearing in the plant.
 
 Given a plant \\(P\\) and controller \\(C\\), the resulting closed-loop system is denoted by \\(CL\\).
 
-The objective of the framework is to find controller parameters that minimize the **spectral abscissa**
+The objective of the framework is to find controller parameters that minimize the spectral abscissa
 
 $$
 \sigma_{\max}(CL)
@@ -185,8 +185,8 @@ A practical difficulty arises when optimizing the distributed-delay controller. 
 
 To address this, two regularization approaches were investigated:
 
-1. **Penalty-based regularization**
-2. **Chebyshev damping**
+1. Penalty-based regularization
+2. Chebyshev damping
 
 ## Penalty-Based Regularization
 
@@ -262,7 +262,7 @@ $$
 }
 $$
 
-For convex multi-objective problems, varying \\(\alpha\\) can be used to trace the Pareto front. Here, however, the spectral-abscissa objective is non-convex. Consequently, the procedure may instead trace a **local Pareto front** associated with a particular local minimum.
+For convex multi-objective problems, varying \\(\alpha\\) can be used to trace the Pareto front. Here, however, the spectral-abscissa objective is non-convex. Consequently, the procedure may instead trace a local Pareto front associated with a particular local minimum.
 
 One way to investigate this is to solve the weighted optimization problem for a sequence of values
 
