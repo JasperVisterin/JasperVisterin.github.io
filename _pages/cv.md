@@ -11,11 +11,11 @@ redirect_from:
 
 Education
 ======
-* M.S. in Mathematical Engineering, KU Leuven, 2025
+* M.S. in Mathematical Engineering, KU Leuven, 2023-2025
   * Summa Cum Laude
-  * including Study Exchange in Sweden, Chalmers University of Technology, 2023
+  * including Erasmus in Sweden, Chalmers University of Technology, Fall 2023
 
-* B.S. in Engineering Science, KU Leuven, 2023
+* B.S. in Engineering Science, KU Leuven, 2020-2023
   * Cum Laude
 
 Work experience
