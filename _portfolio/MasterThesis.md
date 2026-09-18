@@ -1,11 +1,11 @@
 ---
-title: "Control by Shaping Delay Distribution"
+title: "Masterthesis: Control by Shaping Delay Distribution"
 excerpt: "A general-purpose framework for spectral-abscissa optimization with discrete and distributed delays. The results improve the current state of analysis and control concerning time-delay systems. Beyond refining existing tools, this work introduces a novel distributed-delay output feedback control law, including regularization."
 collection: portfolio
 ---
 *MATLAB · Control Theory · Non-smooth Optimization · Time-Delay Systems*
 
-A framework for optimizing static, dynamic, and distributed-delay controllers by minimizing the spectral abscissa of infinite-dimensional time-delay systems.
+A framework for optimizing static, dynamic, and distributed-delay controllers by minimizing the spectral abscissa of infinite-dimensional time-delay systems. This section follows the work of Jasper Visterin's [Masterthesis](https://repository.teneo.libis.be/delivery/DeliveryManagerServlet?dps_pid=IE48018219).
 
 # Key contributions
 
