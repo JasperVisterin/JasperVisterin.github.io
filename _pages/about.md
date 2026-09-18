@@ -14,7 +14,7 @@ While my research has a strong theoretical and computational foundation, the que
 
 I am passionate about inspiring the next generation of engineers by teaching, contributing to the field and making engineering more accessible to the public using science communication. Hereby, I want to thank the wonderful people of VTK for the [Award of Best Teaching Assistant](https://www.gallery.vtk.be/met_vele_groetjes_vd_grappigste_werktuigkunde_student/?pid=18653658529&id=15&h=MzMyMTE1MjcwOQ).
 
-In my spare time, I explain concepts of math and science in a playful way on Ingenium Blog. Additionally, I write for SAI magazine, presenting recent advances in information technology relevant for businesses, computer scientists and information experts.
+In my spare time, I explain concepts of science in a playful way on [Ingenium Blog](https://www.instagram.com/ingenium_blog/). Additionally, I write for [SAI magazine](https://www.sai.be/), presenting recent advances in information technology relevant for businesses, computer scientists and information experts.
 
 My Vision on Mathematics in Engineering
 ======

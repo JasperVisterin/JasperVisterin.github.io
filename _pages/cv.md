@@ -11,22 +11,22 @@ redirect_from:
 
 Education
 ======
-* M.S. in Mathematical Engineering, KU Leuven, 2025
-  * including Study Exchange, Chalmers, 2023
-* B.S. in Engineering Science, KU Leuven, 2023
+* M.S. in Mathematical Engineering (Summa Cum Laude), KU Leuven, 2025
+  * including Study Exchange, Chalmers University of Technology (Sweden), 2023
+* B.S. in Engineering Science (Cum Laude), KU Leuven, 2023
 
 Work experience
 ======
-* Fall 2025: PhD Student
+* Fall 2025 - current day : PhD Student
   * KU Leuven
   * Research and Teaching
   * Supervisor: Wim Michiels
 
-* Summer 2024 - ... : Writing Contributor
+* Summer 2024 - current day : Writing Contributor
   * Study Centre of Automatic Information Processing (SAI)
   * Covering recent developments in the tech and data science sector
   
-Skills
+Programming Languages
 ======
 * MATLAB
 * Python
