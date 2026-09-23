@@ -13,7 +13,7 @@ Education
 ======
 * M.S. in Mathematical Engineering, KU Leuven, 2023-2025
   * Summa Cum Laude
-  * Best Student of the Dutch version of the Master's Programme
+  * Best Student of the Dutch-language version of the Master's Programme
   * including Erasmus in Sweden, Chalmers University of Technology, Fall 2023
 
 * B.S. in Engineering Science, KU Leuven, 2020-2023
