@@ -8,7 +8,7 @@ redirect_from:
 ---
 I’m a second year PhD researcher at the NUMA research unit of KU Leuven’s Department of Computer Science. The main focus of my work is controller design for linear time-invariant dynamical systems with discrete and distributed time delays under the supervision of Wim Michiels. A second key aspect of my research is learning system properties directly from data.
 
-More broadly, I develop algorithms for controller design in infinite-dimensional dynamical systems. These systems are typically described by delay differential equations of retarded type. My work combines aspects of control theory, numerical analysis, dynamical systems, statistics and data-driven methods.
+More broadly, I develop controller design algorithms for infinite-dimensional dynamical systems. These systems are typically described by delay differential equations of retarded type. Both stabilization and robust control can be considered in the design. My work combines aspects of control theory, numerical analysis, dynamical systems, statistics and data-driven control.
 
 While my research has a strong theoretical and computational foundation, the questions I address are motivated by practical problems in engineering and other domains of exact sciences.
 
