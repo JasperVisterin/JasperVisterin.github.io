@@ -9,3 +9,6 @@ location: "Leuven, BE"
 ---
 
 Exercise sessions
+
+Slides
+- [Exercise Session 1](https://JasperVisterin.github.io/files/Oefenzitting 1.pptx)

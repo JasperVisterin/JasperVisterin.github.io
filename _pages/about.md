@@ -20,7 +20,7 @@ In my spare time, I enjoy running, cycling, reading, watching movies, playing fo
 
 My Vision on Mathematical Engineering
 ======
-Ever since I was young, I dreamed of becoming an engineer. The idea of understanding complex systems and solving technical challenges has always fascinated me. Then when going through the first year of engineering at the KU Leuven, I heard of the master Mathematical Engineering. This master intrigued me from the start. In other masters, the core idea is pretty clear. However, what do you do as a mathematical engineer? When following this program, that was a question I received a lot.
+Ever since I was young, I dreamed of becoming an engineer. The idea of understanding complex systems and solving technical challenges has always fascinated me. Then when going through the first year of engineering at the KU Leuven, I heard of the master Mathematical Engineering. This master intrigued me from the start. In other masters, the core idea is pretty clear. However, what do you do as a mathematical engineer? When later following this program, that was a question I received a lot.
 
 Well, the real answer is, you do everything. For instance, you study various subjects like nonlinear systems, optimization, control theory, high-performance computing, data science, numerical simulation, deep learning, statistics, complex analysis and the list goes on. So in fact, Mathematical Engineering does a bit of everything. This programme teaches you to translate real-world challenges into clear mathematical models. By analyzing and validating these models in depth, you discover the real-world solution.
 
