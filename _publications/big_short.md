@@ -6,7 +6,7 @@ permalink: /publication/2025-big-short
 excerpt: 'How is it possible to construct a reliable Data Science model to predict Defaults? Using various regression and calibration methods, a pipeline is proposed to reliably predict when defaults will happen.'
 date: 2025-10-07
 venue: 'SAI Magazine'
-paperurl: 'https://www.linkedin.com/posts/jasper-visterin_how-banks-can-use-data-science-to-predict-activity-7398787018731864065-7T4L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFDsKegBd2Q44CAi2CWvSzl5DbA1fzi18G0'
+paperurl: 'https:///JasperVisterin.github.io/files/big_short_data.pdf'
 citation: ''
 ---
 

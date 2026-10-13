@@ -6,7 +6,7 @@ permalink: /publication/2025-paperclip-maximizer
 excerpt: 'This article discusses the dangers of Ai and instrumental convergence.'
 date: 2025-11-17
 venue: 'SAI Magazine'
-paperurl: 'https://www.linkedin.com/posts/jasper-visterin_from-the-terminator-to-the-paperclip-maximizer-activity-7418910146178785281-G5gw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFDsKegBd2Q44CAi2CWvSzl5DbA1fzi18G0'
+paperurl: 'https:///JasperVisterin.github.io/files/paperclip_maximizer.pdf'
 citation: ''
 ---
 

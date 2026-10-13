@@ -6,7 +6,7 @@ permalink: /publication/2025-graph-anomaly
 excerpt: 'Deep learning can be used to discover anomalies in a large-scale graph setting.'
 date: 2025-10-07
 venue: 'SAI Magazine'
-paperurl: 'https://www.linkedin.com/posts/jasper-visterin_graphs-and-the-art-to-deal-with-partial-information-activity-7403885820417318912-zCAH?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFDsKegBd2Q44CAi2CWvSzl5DbA1fzi18G0'
+paperurl: 'https:///JasperVisterin.github.io/files/graphs_anomaly_detecting.pdf'
 citation: ''
 ---
 
