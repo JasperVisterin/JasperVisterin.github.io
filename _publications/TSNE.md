@@ -4,7 +4,7 @@ collection: publications
 category: SAI
 permalink: /publication/2024-tsne
 excerpt: 'Data Science is a crucial tool to obtain insights. However, when data sets grow too complex, it becomes increasingly difficult to extract information. Various methods propose a solution to this. The goal is to visualize high-dimensional complex data-sets. One example of such a method is t-SNE.'
-date: 2025-07-24
+date: 2024-07-24
 venue: 'SAI Magazine'
 paperurl: 'https:///JasperVisterin.github.io/files/fingerprint_data.pdf'
 citation: ''
