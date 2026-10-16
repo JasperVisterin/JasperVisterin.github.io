@@ -14,3 +14,4 @@ This material is from the Analysis Part 1 (B-KUL-H01A0B) exercise sessions. It i
 
 Slides
 - [Exercise Session 1](https://JasperVisterin.github.io/files/Oefenzitting 1.pptx)
+- [Exercise Session 2](https://JasperVisterin.github.io/files/Oefenzitting 2.pptx)
