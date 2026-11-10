@@ -16,3 +16,4 @@ Slides
 - [Exercise Session 1](https://JasperVisterin.github.io/files/Oefenzitting 1.pptx)
 - [Exercise Session 2](https://JasperVisterin.github.io/files/Oefenzitting 2.pptx)
 - [Exercise Session 3](https://JasperVisterin.github.io/files/Oefenzitting 3.pptx)
+- [Exercise Session 4](https://JasperVisterin.github.io/files/Oefenzitting 4.pptx)
