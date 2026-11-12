@@ -12,7 +12,7 @@ More broadly, I develop controller design algorithms for infinite-dimensional dy
 
 While my research has a strong theoretical and computational foundation, the questions I address are motivated by practical problems in engineering and other domains of exact sciences.
 
-I am passionate about inspiring the next generation of engineers by teaching and contributing to the field. Hereby, I want to thank the wonderful people of VTK for the [Award of Best Teaching Assistant](https://www.gallery.vtk.be/met_vele_groetjes_vd_grappigste_werktuigkunde_student/?pid=18653658529&id=15&h=MzMyMTE1MjcwOQ).
+I am passionate about inspiring the next generation of engineers by teaching and contributing to the field. Hereby, I want to thank the wonderful people of VTK for the [Award of Best Teaching Assistant](https://JasperVisterin.github.io/images/best_assistant award.jpg).
 
 Another passion of mine is making engineering more accessible to the public using science communication. I explain concepts of science in a playful way on [Ingenium Blog](https://www.instagram.com/ingenium_blog/). Additionally, I write for [SAI magazine](https://www.sai.be/), presenting recent advances in information technology relevant for businesses, computer scientists and information technology experts.
 
