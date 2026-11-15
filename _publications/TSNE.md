@@ -3,7 +3,7 @@ title: "Finding the Fingerprint of Data"
 collection: publications
 category: SAI
 permalink: /publication/2024-tsne
-excerpt: 'Data Science is a crucial tool to obtain insights. However, when data sets grow too complex, it becomes increasingly difficult to extract information. Various methods propose a solution to this. The goal is to visualize high-dimensional complex data-sets. Various methods are able to do this each in their unique way. One example of such a method is t-SNE.'
+excerpt: 'Data Science is a crucial tool to obtain insights. However, when data sets grow too complex, it becomes increasingly difficult to extract information. In this article, the goal is to visualize high-dimensional complex data-sets. Various methods are able to do this each in their unique way. One example of such a method is t-SNE.'
 date: 2024-07-24
 venue: 'SAI Magazine'
 paperurl: 'https:///JasperVisterin.github.io/files/fingerprint_data.pdf'
