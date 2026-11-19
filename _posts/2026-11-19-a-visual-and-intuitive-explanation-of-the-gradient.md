@@ -298,7 +298,15 @@ $$\nabla^2f(x,y)=\left[\begin{array}{ccc}
 
 this matrix has eigenvalues \\(1\\) and \\(-1\\) and thus is the Hessian indefinite indicating a saddle point which is in accordance with our earlier reasoning. 
 
-This is in essence the multi-variable second-derivative test that extends the univariate test for which holds that for a point for which \\(f^{\prime}(x^*) = 0\\) that the second derivative \\(f^{\prime\prime}(x^*) = 0\\) will the determine whether it is a minimum, maximum or neither.
+This is in essence the multi-variable second-derivative test that extends the univariate test for which holds that for a point for which
+
+$$ f^{\prime}(x^*) = 0 $$
+
+ that the second derivative
+ 
+ $$ f^{\prime\prime}(x^*) = 0$$ 
+ 
+ will the determine whether it is a minimum, maximum or neither.
 
 # Why is the gradient useful in engineering?
 
