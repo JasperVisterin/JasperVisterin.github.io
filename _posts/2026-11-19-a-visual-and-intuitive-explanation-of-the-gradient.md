@@ -170,7 +170,10 @@ $$ \|\nabla f(1,1)\| = \sqrt{2^2+4^2} = \sqrt{20}.$$
 
 This means that if we move one unit of distance in the direction of steepest ascent, the height initially increases at a rate of \\(\sqrt{20}\\). For comparison, consider moving directly along the positive \\(x\\) axis:
 
-$$ \mathbf \beta_x= \begin{pmatrix}1\\0\end{pmatrix}.$$The directional derivative becomes
+$$ \mathbf \beta_x= \begin{pmatrix}1\\0\end{pmatrix}.$$
+
+The directional derivative becomes
+
 $$ D_{\mathbf \beta_x}f(1,1) = \begin{pmatrix}2\\4\end{pmatrix} \cdot \begin{pmatrix}1\\0\end{pmatrix} =2.$$
 
 This makes sense as this is essentially the same as the partial derivative with respect to \\(x\\) we have computed earlier.
@@ -224,7 +227,7 @@ $$ F(x,y,z)=c,$$
 
 the gradient 
 
-$$\nabla F= \begin{pmatrix} F_x\\F_y\\F_z \end{pmatrix}$$
+$$\nabla F= \begin{pmatrix} \frac{\partial F}{\partial x}\\ \frac{\partial F}{\partial y} \\ \frac{\partial F}{\partial z} \end{pmatrix}$$
 
 is normal to the surface, provided that the gradient is nonzero. This is precisely why the gradient appears when calculating tangent planes!
 
@@ -287,7 +290,7 @@ $$ \nabla^2f(x,y)=\left[\begin{array}{ccc}
 
 Suppose that we found a point for which the gradient is zero, then the point is called a stationary point. For a twice continuously differentiable function, the Hessian matrix is always symmetric. 
 
-A positive definite Hessian at a stationary point guarantees a strict local minimum. A negative definite Hessian guarantees a strict local maximum. An indefinite Hessian indicates a saddle point. If the Hessian is only semidefinite, the second-derivative test may be inconclusive.
+A positive definite Hessian at a stationary point guarantees a strict local minimum. A negative definite Hessian guarantees a strict local maximum. An indefinite Hessian indicates a saddle point. If the Hessian is only semidefinite, the second-derivative test may be inconclusive. We then don't know whether we are dealing with a minimum, maximum or neither.
 
 For the function \\(f(x,y)= x^2 - y^2\\) the Hessian is equal to 
 
