@@ -280,7 +280,7 @@ This means that the function \\(f\\) increases in one direction and decreases in
 
 To distinguish between minima, maxima and saddle points, we need to investigate more than just the gradient. The Hessian matrix is one of the main tools for doing this. For a function \\(f(x,y)\\) with two variables the Hessian is
 
-$\\) \nabla^2f(x,y)=\left[\begin{array}{ccc}
+$$ \nabla^2f(x,y)=\left[\begin{array}{ccc}
 \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x \partial y}  \\
 \frac{\partial^2 f}{\partial y \partial x} & \frac{\partial^2 f}{\partial y^2} 
 \end{array}\right]$$
@@ -291,14 +291,14 @@ A positive definite Hessian at a stationary point guarantees a strict local mini
 
 For the function \\(f(x,y)= x^2 - y^2\\) the Hessian is equal to 
 
-$$ \nabla^2f(x,y)=\left[\begin{array}{ccc}
+$$\nabla^2f(x,y)=\left[\begin{array}{ccc}
 1 & 0 \\
 0 & -1
 \end{array}\right]$$
 
 this matrix has eigenvalues \\(1\\) and \\(-1\\) and thus is the Hessian indefinite indicating a saddle point which is in accordance with our earlier reasoning. 
 
-This is in essence the multi-variable second-derivative test that extends the univariate test for which holds that for a point for which \\(f'(x^*) = 0\\) that the second derivative \\(f''(x^*)\\) will the determine whether it is a minimum, maximum or neither.
+This is in essence the multi-variable second-derivative test that extends the univariate test for which holds that for a point for which \\(f^{\prime}(x^*) = 0\\) that the second derivative \\(f^{\prime\prime}(x^*) = 0\\) will the determine whether it is a minimum, maximum or neither.
 
 # Why is the gradient useful in engineering?
 
