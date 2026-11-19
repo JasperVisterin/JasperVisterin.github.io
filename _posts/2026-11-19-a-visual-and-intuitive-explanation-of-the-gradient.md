@@ -6,7 +6,7 @@ tags:
   - Multivariable Calculus
   - Optimization
 ---
-In this post I explain the basics of the gradient. 
+In this post I explain the basics of the gradient. All visualizations have been constructed using MATLAB. You can find the MATLAB-code [here](https://JasperVisterin.github.io/files/gradient_visualizer.mlx).
 
 Imagine standing on a mountain. You can see the surrounding terrain, and your goal is to find the top. Then a logical question to ask is which direction should you walk if you want to climb as steeply as possible?
 
