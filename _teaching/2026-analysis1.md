@@ -19,3 +19,4 @@ Slides
 - [Exercise Session 4](https://JasperVisterin.github.io/files/Oefenzitting 4.pptx)
 - [Exercise Session 5](https://JasperVisterin.github.io/files/Oefenzitting 5.pptx)
 - [Exercise Session 6](https://JasperVisterin.github.io/files/Oefenzitting 6.pptx)
+- [Blog Post Gradient](https://JasperVisterin.github.io/posts/gradient_visual)
